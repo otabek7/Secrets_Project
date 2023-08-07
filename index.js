@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
 });
 
 app.post("/check", (req, res) => {
-  if (req.body["password"] == "one") {
-    res.send("ILoveProgramming");
+  if (req.body["password"] == "ILoveProgramming") {
+    res.sendFile(__dirname + "/public/secret.html");
   } else {
-    res.send("incorrect");
+    res.sendFile(__dirname + "/public/index.html");
   }
 });
 
